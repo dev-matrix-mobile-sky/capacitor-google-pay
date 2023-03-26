@@ -49,7 +49,9 @@ repositories {
     google()
     mavenCentral()
     jcenter()
-    maven { url "$sdkDir/extras/google/m2repository"}
+    
+    // YB FIX - do not use this, add gPay local SDK with maven in main build.gradle
+    //maven { url "$sdkDir/extras/google/m2repository"}
 }
 
 
@@ -61,6 +63,9 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
 
-    implementation 'com.google.android.gms:play-services-tapandpay:18.2.0'
+    // YB FIX - upgrade to newer SDK version
+    //implementation 'com.google.android.gms:play-services-tapandpay:18.2.0'
+    implementation 'com.google.android.gms:play-services-tapandpay:18.3.2'
+    
     implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
 }
